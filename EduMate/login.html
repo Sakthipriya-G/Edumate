@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduMate Login</title>
+
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#03116e">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #232526 0%, #3c3b3f 100%);
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container {
+            background: #03116e;
+            border-radius: 15px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+            width: 350px;
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .google-logo {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+            font-family: Arial, sans-serif;
+        }
+        .google-logo span { font-family: inherit; }
+        .google-logo .blue  { color: #4285f4; }
+        .google-logo .red   { color: #ea4335; }
+        .google-logo .yellow{ color: #fbbc05; }
+        .google-logo .green { color: #34a853; }
+        .login-title {
+            color: #FFD700;
+            font-size: 32px;
+            margin-bottom: 28px;
+            font-family: inherit;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .login-btn {
+            width: 100%;
+            background: #FFD700;
+            color: #000;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            margin: 16px 0 12px 0;
+            padding: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .login-btn:hover {
+            background: #FFC400;
+        }
+        .google-btn {
+            width: 100%;
+            background: #4285f4;
+            color: #fff;
+            border: none;
+            margin-top: 4px;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .google-btn:hover {
+            background: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="google-logo">
+            <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+        </div>
+        <div class="login-title">EduMate</div>
+        <form id="loginForm">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="login-btn">Login</button>
+            <button type="button" class="google-btn">Sign in with Google</button>
+        </form>
+    </div>
+
+    <script>
+    // Redirect to home.html on successful login
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', function(e){
+        e.preventDefault(); // Prevent default form submission
+        // Simple validation (email & password filled)
+        const email = loginForm.querySelector('input[type="email"]').value;
+        const password = loginForm.querySelector('input[type="password"]').value;
+        if(email && password){
+            // Redirect to index.html
+            window.location.href = "index.html";
+        } else {
+            alert("Please enter email and password");
+        }
+    });
+
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker Registered'))
+        .catch(err => console.log('SW registration failed:', err));
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Student Management</h1>
+    <nav><a href="index.html">🏠 Home</a></nav>
+  </header>
+
+  <section class="form-container">
+    <input type="text" id="sname" placeholder="Student Name">
+    <input type="text" id="sroll" placeholder="Roll Number">
+    <input type="number" id="smarks" placeholder="Marks">
+    <input type="number" id="sattendance" placeholder="Attendance %">
+    <button onclick="addStudent()">Add Student</button>
+  </section>
+
+  <section class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Roll No</th>
+          <th>Marks</th>
+          <th>Attendance</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable">
+        <!-- Student rows will appear here -->
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <div class="footer container">
+    &copy; 2025 EDUMATE. Designed by Sakthipriya.
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

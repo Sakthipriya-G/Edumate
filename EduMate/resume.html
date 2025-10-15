@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav><a href="index.html">🏠 Home</a></nav>
+
+  <div class="card">
+    <h1>AI Resume Builder</h1>
+    <p>Build your professional resume easily with smart AI guidance.</p>
+
+    <div class="form">
+      <label>
+        Full Name
+        <input type="text" id="rname" placeholder="Enter your full name">
+      </label>
+
+      <label>
+        Email Address
+        <input type="email" id="remail" placeholder="Enter your email">
+      </label>
+
+      <label>
+        Education
+        <textarea id="reducation" placeholder="Enter your education details"></textarea>
+      </label>
+
+      <label>
+        Skills
+        <textarea id="rskills" placeholder="List your skills (e.g., teamwork, Python, marketing)"></textarea>
+      </label>
+
+      <label>
+        Experience / Projects
+        <textarea id="rexp" placeholder="Enter your work or project experience"></textarea>
+      </label>
+
+      <div class="actions">
+        <button onclick="generateResume()">✨ Generate Resume</button>
+        <button onclick="downloadPDF()">📄 Download PDF</button>
+      </div>
+    </div>
+
+    <h3>Preview</h3>
+    <div id="resumeOutput" class="preview"></div>
+  </div>
+
+  <!-- PDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- Combined JS -->
+  <script src="main.js"></script>
+
+  <footer>
+    <div class="footer container">
+    &copy; 2025 EDUMATE. Designed by Sakthipriya.
+    </div>
+  </footer>
+</body>
+</html>

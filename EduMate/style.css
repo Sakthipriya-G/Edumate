@@ -1,0 +1,378 @@
+/* ---------------------- GLOBAL STYLES ---------------------- */
+* { box-sizing: border-box; }
+body {
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: rgb(41, 11, 11);
+  color: rgb(255, 255, 255);
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: rgb(238, 203, 6);
+  } 
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+input, textarea, select {
+  font-family: inherit;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid black;
+  width: 100%;
+}
+
+/* ---------------------- HOME PAGE ---------------------- */
+header {
+  margin-bottom: 20px;
+text-align: center;
+}
+h1 { margin: 0 0 6px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px;
+  border-radius: 12px;
+  background: white;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 6px 18px rgba(11,27,43,0.08);
+  font-weight: 600;
+  font-size: 18px;
+}
+footer {
+  margin-top: 28px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* ---------------------- STUDENT MANAGEMENT ---------------------- */
+.container {
+  max-width: 900px;
+  margin: 12px auto;
+  padding: 18px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+.buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.search {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+button.action {
+  padding: 6px 8px;
+  margin-right: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button.edit {
+  background: #fffbe5;
+  border: 1px solid #e6b800;
+}
+button.delete {
+  background: #ffecec;
+  border: 1px solid #ff7b7b;
+}
+
+/* ---------------------- TO-DO & ALARM ---------------------- */
+.wrap {
+  max-width: 800px;
+  margin: 12px auto;
+  background: #fff;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.04);
+}
+.todo-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.todo-form input[type="text"],
+.todo-form input[type="datetime-local"] {
+  flex: 1;
+}
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.small {
+  font-size: 13px;
+  color: #666;
+}
+.actions button {
+  margin-left: 6px;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+.note {
+  font-size: 13px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* ---------------------- AI RESUME BUILDER ---------------------- */
+.card {
+  max-width: 900px;
+  margin: 12px auto;
+  background: #fff;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 8px 26px rgba(2,6,23,0.06);
+}
+.card label {
+  display: block;
+  margin: 8px 0;
+}
+.actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+.preview {
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  white-space: pre-wrap;
+}
+
+/* ---------------------- STUDY TRACKER ---------------------- */
+.subject {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.summary {
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  white-space: pre-wrap;
+}
+/* Wrap / Container */
+.wrap {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #1a1a2e; /* dark navy as contrast to dark red */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  color: #f0f0f0;
+}
+
+/* Form Inputs */
+#subjectForm input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #e43f5a; /* bright pinkish-red border for contrast */
+  background: #1f4068; /* deep blue */
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Form Button */
+#subjectForm button {
+  padding: 10px 16px;
+  background: #e43f5a; /* bright red for call-to-action */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+#subjectForm button:hover {
+  background: #f07b3f; /* orange-red on hover */
+}
+
+/* Subject Boxes */
+.subject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #162447; /* midnight blue */
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Delete Button in Box */
+.subject button {
+  background: #ff784f; /* orange for delete */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.subject button:hover {
+  background: #e63946; /* red on hover */
+}
+
+/* Summary Box */
+.summary {
+  background: #ffffff; /* deep blue */
+  color:black;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Headings */
+h2, h3 {
+  color: #f4d35e; /* golden yellow for headings */
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Resume Builder Specific Enhancements */
+.card h1 {
+    text-align: center;
+    color: #0b1b2b;
+  }
+  
+  .card p {
+    text-align: center;
+    color: #555;
+  }
+  
+  .preview {
+    background: #fdfdfd;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    min-height: 160px;
+    white-space: pre-wrap;
+    font-family: "Courier New", monospace;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  
+  /* ===== FOOTER STYLES ===== */
+.footer {
+    background: #0b1b2b;
+    color: #fff;
+    padding: 40px 20px 20px 20px;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+  
+  .footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #f0f0f0;
+  }
+  
+  .footer-column p, .footer-column ul, .footer-column li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #aaa;
+  }
+  
+  /* Stick footer to bottom if content is short */
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
